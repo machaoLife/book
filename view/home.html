@@ -1,0 +1,27 @@
+<div>
+    <div class="page-header">首页</div>
+    <div class="page-body">
+        <!-- 广告 -->
+        <div class="advert">
+            <img ng-src="{{imgSrc}}"/>
+        </div>
+        <!-- 搜索 -->
+        <div class="search">
+            <div ng-click="goSearch();"><i class="fa fa-search"></i>搜索图书</div>
+        </div>
+
+        <!-- 推荐 -->
+        <div class="recommend">
+            <!-- 馆长推荐导航栏 -->
+            <div class="homeNav">
+                <div ng-repeat="item in column" ng-class="{'homeActive':listIndex==$index}" ng-click="showHomeList($index);">{{item.Name}}</div>
+            </div>
+
+            <!-- 图书内容 -->
+            <home-list list="list" index="listIndex" ng-show="loadSuccess"></home-list>
+            <!-- 缓存 -->
+            <load-cache show="!loadSuccess"></load-cache>
+        </div>
+    </div>
+    <page-nav title="0"></page-nav>
+</div>

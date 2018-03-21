@@ -1,0 +1,14 @@
+<div>
+    <div class="page-header">分类</div>
+    <div class="page-body">
+        <img src="images/bg.jpg" class="listImg"/>
+        <!-- 分类 -->
+        <div class="category">
+            <div ng-repeat="item in categoryList">
+                <img ng-src="{{item.Image}}" ng-click="goBookList(item.Id);"/>
+                <span>{{item.Name}}</span>
+            </div>
+        </div>
+    </div>
+    <page-nav title="1"></page-nav>
+</div>

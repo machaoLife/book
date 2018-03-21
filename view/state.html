@@ -1,0 +1,28 @@
+<!-- 借阅图书的状态 -->
+<div>
+    <div class="page-header"><i class="fa fa-chevron-left" ng-click="goMyBoorow();"></i>订单详情</div>
+    <div class="details">
+        <h2>订单状态:</h2>
+        <div class="state-header">
+            <label>{{state();}}<span>《&nbsp;{{name}}&nbsp;》</span></label>
+            <span>配送费用:0.00</span>
+        </div>
+        <!-- 头部介绍 -->
+        <div class="details-top">
+            <img ng-src="{{book.Image}}" />
+            <div class="details-right">
+                <span>{{book.Name}}</span>
+                <span></i>{{book.Author.Name}}</span>
+                <span></i>{{book.Publisher.Name}}</span>
+                <span></i>{{book.PublishDate}}</span>
+            </div>
+        </div>
+        <!-- 图书简介 -->
+        <div class="details-bottom">
+            <div class="details-header">简介</div>
+            <div class="details-content">
+                <span>&nbsp;&nbsp;{{book.Introduce}}</span>
+            </div>
+        </div>
+    </div>
+</div>

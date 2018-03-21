@@ -1,0 +1,202 @@
+/* 分类 */
+.listImg{
+    width: 100%;
+    height: 5rem;
+}
+.category{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.category>div{
+    margin-top: 10px;
+    width: 5.4rem;
+    height: 3rem;
+    box-sizing: border-box;
+    border-radius: 6px;
+    margin-left:0.39rem;
+    background-color: #70B3E8;
+    text-align: center;
+}
+.category>div>img{
+    width: 1.4rem;
+    height: 1.4rem;
+    margin-top: 0.5rem;
+}
+.category>div>span{
+    display: block;
+    font-size: 0.5rem;
+    color: #fff;
+}
+
+/* 图书列表 */
+.bookList{
+    position: absolute;
+    top:52px;
+    left:0;
+    right: 0;
+    bottom: 0;
+}
+.bookList>div{
+    width: 100%;
+    height: 4rem;
+    box-sizing: border-box;
+    padding: 10px;
+    position: relative;
+    border-bottom: 1px solid #ccc;
+}
+.bookList-content>img{
+    width: 3.4rem;
+    height: 3.4rem;
+    display: block;
+}
+.bookList-content>div{
+    position: absolute;
+    left:5.2rem;
+    top:10px;
+    line-height: 24px;
+}
+.bookList-content>div>span:nth-of-type(1){
+    color: #333;
+    font-size: 0.5rem;
+    display: block;
+}
+.bookList-content>div>span:nth-of-type(n+2){
+    color: #999;
+    font-size: 0.45rem;
+    display: block;
+}
+.bookList-content>i{
+    position: absolute;
+    top:1.4rem;
+    right: 0.6rem;
+    color:#999 ;
+}
+.moment{
+    font-size: 16px;
+    color: #666;
+    margin-left: 10px;
+}
+
+/* 图书详情 */
+.details{
+    position: absolute;
+    top:52px;
+    bottom: 0;
+    left:0;
+    right: 0;
+    overflow-y: auto;
+}
+.details>h2{
+    display: block;
+    width: 100%;
+    height: 36px;
+    line-height: 36px;
+    font-size: 0.5rem;
+    padding-left: 10px;
+    color: #333;
+    box-sizing: border-box;
+    background-color: #f2f2f2;
+}
+.details-top{
+    width: 100%;
+    height: 6.3rem;
+    box-sizing: border-box;
+    position: relative;
+    padding: 10px 10px;
+}
+.details-top>img{
+    width: 5.6rem;
+    height: 5.6rem;
+}
+.details-right{
+    position: absolute;
+    top:30px;
+    right: 7px;
+    width: 180px;
+}
+.details-right>span{
+    display: block;
+    font-size: 0.47rem;
+    line-height: 1rem;
+    color:#333;
+}
+.details-right>span>i{
+    padding-right: 8px;
+    font-size: 0.2rem;
+    color: #F1B819;
+}
+.details-bottom{
+    width: 100%;
+}
+.details-header{
+    width: 100%;
+    height: 42px;
+    background-color: #F2F2F2;
+    box-sizing: border-box;
+    padding:0 20px;
+    line-height: 42px;
+    color: #666;
+}
+.details-header>i{
+    padding-right: 8px;
+    font-size: 0.2rem;
+    color: #F1B819;
+}
+.details-content{
+    margin-top: 8px;
+    width: 100%;
+    overflow-y: auto;
+    box-sizing: border-box;
+    padding:0 20px;
+    color: #999;
+    font-size: 0.5rem;
+}
+.isShow{
+    display: block;
+    color: #d9534f;
+}
+.bookcase{
+    position: absolute;
+    bottom: 0;
+    left:0;
+    right: 0;
+    height: 48px;
+    line-height: 48px;
+    display: flex;
+    flex-direction: row;
+}
+.bookcase>div{
+    flex: 1;
+    height: 48px;
+    line-height: 48px;
+    text-align: center;
+}
+.bookcase>div:nth-of-type(1){
+    box-sizing: border-box;
+    border:1px solid #d2d2d2;
+    background-color: #fff;
+    color: #269ABC;
+}
+.bookcase>div:nth-of-type(2){
+    background-color: #269ABC;
+    color: #fff;
+}
+.bookList>label{
+    display: block;
+    width: 100%;
+    height: 48px;
+    line-height: 48px;
+    color: #666;
+    text-align: center;
+    font-size: 0.48rem;
+}
+.bookList>i{
+    display: block;
+    color: #999;
+    height: 48px;
+    line-height: 48px;
+    font-size: 1.6rem;
+    text-align: center;
+    width: 100%;
+}

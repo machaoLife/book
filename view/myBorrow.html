@@ -1,0 +1,42 @@
+<!-- 我的借阅 -->
+<div>
+    <div class="page-header"><i class="fa fa-chevron-left" ng-click="goMine();"></i>我的借阅</div>
+    <div class="borrow">
+        <div class="borrow-header">
+            <div ng-class="{'borrowActive':listIndex==0}" ng-click="showBorrow(0);">当前借阅</div>
+            <div ng-class="{'borrowActive':listIndex==1}" ng-click="showBorrow(1);">借阅历史</div>
+        </div>
+        <!-- 缓存 -->
+        <load-cache show="!loadSuccess"></load-cache>
+        <!-- 当前借阅 -->
+        <div ng-repeat="item in bookCase" class="borrow-content" ng-show="isShow">
+            <div class="borrow-title">
+                <label>订单编号:{{item.BorrowNumber}}</label>
+                <label>{{state(item.State,item)}}</label>
+            </div>
+            <img ng-src="{{item.BookImage}}" >
+            <div class="borrow-right">
+                <span>{{item.BookName}}</span>
+                <span>{{item.AuthorName}}</span>
+                <span>{{item.PublisherName}}</span>
+            </div>
+            <button ng-click="cancelOrder(item.Id,item.BookName);"  ng-show="cancel">取消订单</button>
+            <button ng-click="affirmOrder(item.Id);"  ng-show="affirm">确认收货</button>
+            <i class="fa fa-chevron-right" ng-click="goState(item);"></i>
+        </div>
+        <!-- 借阅记录 -->
+        <div ng-repeat="item in bookRecord" class="bookList-content" ng-hide="isShow">
+            <img ng-src="{{item.BookImage}}" >
+            <div class="bookList-right">
+                <span>{{item.BookName}}</span>
+                <span>{{item.AuthorName}}</span>
+                <span>{{item.PublisherName}}</span>
+                <span>已归还图书</span>
+            </div>
+            <i class="fa fa-chevron-right" ng-click="goDetails(item);"></i>
+        </div>
+    </div>
+
+    <!-- 取消订单提示 -->
+    <cancel-dialog show="abolish"  affirm="affirmIndent();" cancel="cancelIndent();"></cancel-dialog>
+</div>

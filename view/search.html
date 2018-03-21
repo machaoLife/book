@@ -1,0 +1,19 @@
+<div>
+    <div class="search-top">
+        <i class="fa fa-chevron-left" ng-click="goHome();"></i>
+        <input type="text" placeholder="请输入图书的名字/ISBN" ng-model="txtSearch"/>
+        <i class="fa fa-search" ng-click="searchBook();"></i>
+    </div>
+    <div class="search-title">
+        <i class="fa fa-book"></i>
+        <span>历史搜索</span>
+    </div>
+    <!-- 搜索历史数据 --><!--ng-repeat="item in searchList"-->
+    <div  class="history" ng-repeat="item in historyList">
+        <i class="fa fa-clock-o"></i>
+        <span ng-click="searchHistory(item);">{{item}}</span>
+        <i class="fa fa-times"></i>
+    </div>
+    <span ng-click="clearSearch();" class="clearSearch">清除搜索历史</span>
+    <img src="images/search.PNG" class="searchImg"/>
+</div>

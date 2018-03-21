@@ -1,0 +1,21 @@
+<div>
+    <div class="page-header"><i class="fa fa-chevron-left" ng-click="goList();"></i>图书列表</div>
+    <!-- 图书列表 -->
+    <div class="bookList">
+        <span class="moment" ng-show="moment">该分类暂无书籍...</span>
+        <div ng-repeat="item in bookList" class="bookList-content">
+            <img src="images/default.jpg"   imageonload="loadImage(item.Book.Image)">
+            <div class="bookList-right">
+                <span>{{item.Book.Name}}</span>
+                <span>{{item.Book.Author.Name}}</span>
+                <span>{{item.Book.PublishDate}}</span>
+                <span>{{item.Book.Publisher.Name}}</span>
+            </div>
+            <i class="fa fa-chevron-right" ng-click="goDetails(item.Book);"></i>
+        </div>
+        <label ng-click="loadMore();" ng-show="loadState.isLoad&&!moment">{{loadState.title}}</label>
+
+        <i class="fa fa-spinner fa-pulse fa-3x fa-fw" ng-show="loadState.loading"></i>
+
+    </div>
+</div>

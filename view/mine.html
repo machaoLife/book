@@ -1,0 +1,63 @@
+<div>
+    <div class="page-header">我的</div>
+    <div class="page-body">
+            <!--个人信息的容器 -->
+            <div class="personal-container">
+                <div class="personal-header" ng-click="goLogin();">
+                    <img ng-src="{{userImg}}" >
+                    <span class="personal-name">{{user}}</span>
+                </div>
+                <div class="personal-message">
+                    <i class="fa fa-envelope"></i>
+                    <div ng-click="showBookcase();">
+                        <span>我的借书架</span>
+                        <i class="fa fa-chevron-right"></i>
+                    </div>
+                </div>
+                <div class="personal-message">
+                    <i class="fa fa-vimeo"></i>
+                    <div ng-click="myBorrow();">
+                        <span>我的借阅</span>
+                        <i class="fa fa-chevron-right"></i>
+                    </div>
+                </div>
+                <div class="personal-message">
+                    <i class="fa fa-cog"></i>
+                    <div ng-click="address();">
+                        <span>管理地址</span>
+                        <i class="fa fa-chevron-right"></i>
+                    </div>
+                </div>
+                <div class="personal-message">
+                    <i class="fa fa-id-badge"></i>
+                    <div>
+                        <span>软件反馈</span>
+                        <i class="fa fa-chevron-right"></i>
+                    </div>
+                </div>
+                <div class="personal-message">
+                    <i class="fa fa-shopping-cart"></i>
+                    <div>
+                        <span>常见问题</span>
+                        <i class="fa fa-chevron-right"></i>
+                    </div>
+                </div>
+                <div class="personal-message" id="personal-canel">
+                    <i class="fa fa-sitemap"></i>
+                    <div>
+                        <span>关于软件</span>
+                        <i class="fa fa-chevron-right"></i>
+                    </div>
+                </div>
+               <!-- <div class="personal-message" id="personal-back">
+                    <i class="fa fa-arrow-left"></i>
+                    <div>
+                        <span>退出</span>
+                        <i class="fa fa-chevron-right"></i>
+                    </div>
+                </div>-->
+            </div>
+
+    </div>
+    <page-nav title="3"></page-nav>
+</div>

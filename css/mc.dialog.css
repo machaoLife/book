@@ -1,0 +1,66 @@
+
+.mc-dialog-bg{
+    z-index: 9;
+    position: fixed;
+    left:0;
+    top:0;
+    right: 0;
+    bottom:0;
+    background-color: rgba(0,0,0,0.2);
+}
+.mc-dialog{
+    position: absolute;
+    left: 50%;
+    top:50%;
+    width: 8rem;
+    height: 4rem;
+    transform:translate(-50%,-50%);
+    background-color: #f2f2f2;
+    border-radius: 8px;
+}
+.mc-dialog-main{
+    box-sizing: border-box;
+    padding:20px;
+    height: 2.8rem;
+    color:#666;
+    text-align: center;
+    font-size: 0.5rem;
+}
+.mc-dialog-footer{
+    border-top: 1px solid #ccc;
+    height: 1.2rem;
+    line-height: 1.2rem;
+}
+.mc-dialog-footer:after{
+    content: '';
+    clear: both;
+    display: block;
+}
+.mc-dialog-footer>button{
+    margin-top: 6px;
+    width: 80px;
+    height: 26px;
+    line-height: 26px;
+    text-align: center;
+    font-size: 14px;
+}
+#mc-dialog-affirm{
+    float:right;
+    margin-right: 80px;
+    background-color: #66BE8C;
+    color:#fff;
+    cursor: pointer;
+}
+#mc-dialog-cancel{
+    float:left;
+    margin-left:80px;
+    background-color: #ccc;
+    color:#666;
+    cursor: pointer;
+}
+#mc-dialog-close{
+    float:left;
+    margin-left:84px;
+    background-color: #ccc;
+    color:#999;
+}

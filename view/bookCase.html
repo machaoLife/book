@@ -1,0 +1,30 @@
+<!-- 我的借书架 -->
+<div>
+    <div class="page-header"><i class="fa fa-chevron-left" ng-click="goMine();"></i>借书架<span>编辑</span></div>
+    <div class="case">
+        <div ng-repeat="item in bookCase" class="case-content">
+            <i class="fa fa-check-circle-o" ng-click="check($index,$event);" ng-class="{'checkActive':checkData.checkTotal}"></i>
+            <img ng-src="{{item.Book.Image}}" ng-click="goDetails(item.Book.Name);">
+            <div class="case-right">
+                <span>{{item.Book.Name}}</span>
+                <span>{{item.Book.Author.Name}}</span>
+                <span>{{item.Book.PublishDate}}</span>
+                <span>{{item.Book.Publisher.Name}}</span>
+            </div>
+            <i class="fa fa-trash" ng-click="cancelSingleBook(item.Book,$index);"></i>
+        </div>
+    </div>
+    <div class="case-bottom">
+        <div class="case-bottom-left">
+            <i class="fa fa-check-circle-o" ng-click="checkAllers();"></i>
+            <label ng-click="alles();">全选删除</label>
+            <label>合计:<span class="case-count">{{count}}</span>本</label>
+        </div>
+        <div class="case-bottom-right" ng-click="sumbit();">提交订单</div>
+    </div>
+
+    <!-- 单选删除提示 -->
+    <cancel-dialog show="single"  affirm="affirmBook();" cancel="cancelBook();"></cancel-dialog>
+
+</div>
+<!-- fa-check-circle  -->

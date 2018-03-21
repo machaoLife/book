@@ -1,0 +1,23 @@
+<!-- 忘记密码后 获取验证码 -->
+<div class="page-login">
+    <div class="page-header"><i class="fa fa-undo" ng-click="goLogin();"></i>重置密码</div>
+    <form name="frm" novalidate>
+        <div class="page-login-container">
+            <div>
+                <i class="fa fa-user-o"></i>
+                <input type="text" ng-model="account.username" pattern="^1[3578]\d{9}$" name="username" required placeholder="请输入手机号">
+                <span class="input-red" ng-show="frm.username.$dirty && frm.username.$error.required">手机号不能为空!</span>
+                <span class="input-red"  ng-show="frm.username.$dirty && frm.username.$error.pattern">手机号格式不正确!</span>
+            </div>
+            <div>
+                <i class="fa fa-unlock-alt"></i>
+                <input type="password" name="code" required pattern="^\w{4}$" ng-model="account.code"   placeholder="请输入验证码">
+                <button ng-click="getCard();" class="card" ng-disabled="cardTime&&frm.username.$invalid">{{cardContent}}</button>
+                <span class="input-red" ng-show="frm.code.$dirty && frm.code.$error.required">验证码不能为空!</span>
+                <span class="input-red"  ng-show="frm.code.$dirty && frm.code.$error.pattern">密码格式不正确!</span>
+            </div>
+            <button ng-disabled="frm.$pristine && frm.$invalid" ng-class="{'loginAble':frm.$dirty && frm.$valid}" ng-click="goNext();">下一步</button>
+        </div>
+    </form>
+</div>
+

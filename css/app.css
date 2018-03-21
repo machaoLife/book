@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+.page{
+    width: 100%;
+    height: 100%;
+    font-size: 0.6rem;
+    font-family: 'Microsoft YaHei';
+}
+.page>div{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow-y: auto;
+}
+a{
+    text-decoration: none;
+    color:#999;
+}
+.page-header{
+    position: absolute;
+    top:0;
+    left:0;
+    right: 0;
+    height: 52px;
+    background-color: #269abc;
+    color:#fff;
+    text-align: center;
+    line-height: 52px;
+}
+.page-header>i{
+    position: absolute;
+    left:20px;
+    top:16px;
+}
+.page-header>span{
+    position: absolute;
+    right: 20px;
+    top: 0px;
+    font-size: 0.5rem;
+    color: #fff;
+}
+.page-nav{
+    position: absolute;
+    bottom:0;
+    left:0;
+    right: 0;
+    height: 52px;
+    display: flex;
+    color: #999;
+}
+.page-nav>div{
+    flex: 1;
+    text-align: center;
+    font-size: 16px;
+}
+.page-nav>div>i{
+
+   margin-top: 4px;
+    font-size: 20px;
+}
+.page-nav>div>a{
+    display: block;
+}
+.page-body{
+    position: absolute;
+    top:52px;
+    left:0;
+    right: 0;
+    bottom: 52px;
+    overflow-y: auto;
+}
+.active{
+    color:#70B3E8;
+}
+.splash{
+    z-index: 90;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/splash.jpg");
+    background-position: center top;
+}
+
+
+
+
+
+
+
+

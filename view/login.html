@@ -1,0 +1,28 @@
+<div class="page-login">
+    <div class="page-header"><i class="fa fa-undo" ng-click="loginBack();"></i>登录</div>
+    <form name="frm" novalidate>
+        <div class="page-login-container">
+            <div>
+                <i class="fa fa-user-o"></i>
+                <input type="text" ng-model="account.username" pattern="^1[3578]\d{9}$" name="username" required id="txtName" placeholder="手机号/用户名">
+                <span class="input-red" ng-show="frm.username.$dirty && frm.username.$error.required">手机号不能为空!</span>
+                <span class="input-red"  ng-show="frm.username.$dirty && frm.username.$error.pattern">手机号格式不正确!</span>
+            </div>
+            <div>
+                <i class="fa fa-unlock-alt"></i>
+                <input type="password" name="password" required pattern="^\w{4,12}$" ng-model="account.password"  id="txtPassword" placeholder="密码">
+                <span class="input-red" ng-show="frm.password.$dirty && frm.password.$error.required">密码不能为空!</span>
+                <span class="input-red"  ng-show="frm.password.$dirty && frm.password.$error.pattern">密码格式不正确!</span>
+            </div>
+            <button ng-disabled="frm.$pristine && frm.$invalid " ng-class="{'loginAble':frm.$dirty && frm.$valid}" ng-click="login();">登录</button>
+            <span class="forget" ng-click="verification();">忘记密码?</span>
+            <div id="reminder">
+                <p>友情提示:</p>
+                <p>1、登录凭证需到市图书馆或各区分馆办理.</p>
+                <p>2、办理借书业务时，需要携带身份证.</p>
+                <p>3、app借书请先登录后操作</p>
+            </div>
+        </div>
+    </form>
+</div>
+

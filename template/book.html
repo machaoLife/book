@@ -1,0 +1,26 @@
+<div class="details">
+    <!-- 头部介绍 -->
+    <div class="details-top">
+        <img ng-src="{{book.Image}}" />
+        <div class="details-right">
+            <span>{{book.Name}}</span>
+            <span></i>{{book.Author.Name}}</span>
+            <span></i>{{book.Publisher.Name}}</span>
+            <span></i>{{book.PublishDate}}</span>
+
+        </div>
+    </div>
+    <!-- 图书简介 -->
+    <div class="details-bottom">
+        <div class="details-header">简介</div>
+        <div class="details-content">
+            <span>&nbsp;&nbsp;{{book.Introduce}}</span>
+        </div>
+    </div>
+
+    <!-- 借书按钮 -->
+    <div class="bookcase">
+        <div ng-click="goBookcase();">借书架</div>
+        <div ng-click="joinCase();">加入借书架</div>
+    </div>
+</div>

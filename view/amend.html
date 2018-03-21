@@ -1,0 +1,16 @@
+<!-- 修改密码 -->
+<div class="page-login">
+    <div class="page-header"><i class="fa fa-undo" ng-click="goVerification();"></i>修改密码</div>
+    <form name="frm" novalidate>
+        <div class="page-login-container">
+            <div>
+                <i class="fa fa-user-o"></i>
+                <input type="text" ng-model="account.username" pattern="^\w{4,12}$" name="username" required placeholder="请输入新密码">
+                <span class="input-red" ng-show="frm.username.$dirty && frm.username.$error.required">新密码不能为空!</span>
+                <span class="input-red"  ng-show="frm.username.$dirty && frm.username.$error.pattern">新密码格式不正确!</span>
+            </div>
+            <button ng-disabled="frm.$pristine && frm.$invalid " ng-class="{'loginAble':frm.$dirty && frm.$valid}" ng-click="sumbit();">提交</button>
+        </div>
+    </form>
+</div>
+
